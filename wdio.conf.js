@@ -1,24 +1,27 @@
 exports.config = {
     specs: [
-        './specs/**/*/spec.js'
-
+        './specs/**/*.spec.js'
+    ],
+    exclude: [
+        './specs/example.spec.js'
     ],
     maxInstances: 1,
     capabilities: [{
         maxInstances: 1,
         browserName: 'chrome',
         acceptInsecureCerts: true
-
     }],
     logLevel: 'info',
     bail: 0,
-    baseUrl: 'http://localhost',
+    baseUrl: 'https://kompot.us',
+
     waitforTimeout: 10000,
-    connectionRetryTimeout: 120000,
+    connectionRetryTimeout: 30000,
     connectionRetryCount: 1,
+
     services: ['devtools'],
-    framework: 'mocha',
     reporters: ['spec'],
+    framework: 'mocha',
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000
