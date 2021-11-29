@@ -14,7 +14,7 @@ class LoginPage extends Page {
         await this.buttonSubmit.click();
     }
     open() {
-        return super.open('/user/login');
+        return super.open('https://kompot.us');
     }
 }
 

@@ -9,7 +9,7 @@ describe('Auth', function (){
     it('Successful log in', async function (){
         await expect(LoginPage.buttonSubmit)
             .toBeDisabled();
-        await LoginPage.login('DTest@exmpl.com', 'Test1234');
+        await LoginPage.login(process.env.LOGIN, process.env.PASSWORD);
         await expect(ProfilePage.iconUser)
             .toBeDisplayed();
 
@@ -31,5 +31,5 @@ describe('Auth', function (){
         await LoginPage.inputPassword.setValue('test')
         await LoginPage.inputPassword.smartClear();
         await expect(LoginPage.passwordError).toHaveText('Required');
-    });
+   });
  });
