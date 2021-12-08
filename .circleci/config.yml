@@ -12,9 +12,9 @@ jobs:
       - checkout
       - run:
          name: Install dependencies
-          command: |
+         command: |
                   npm i
-        -run:
+      - run:
           name: Run tests
           command: |
             npm run test:chrome:headless
