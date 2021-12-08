@@ -11,13 +11,14 @@ jobs:
     steps:
       - checkout
       - run:
-         name: Install dependencies
-         command: |
-                  npm i
-      -run:
-         name: Run tests
-         command: |
+          name: Install dependencies
+          command: |
+            npm i
+      - run:
+          name: Run tests
+          command: |
             npm run test:chrome:headless
+
 workflows:
   commit:
     jobs:
