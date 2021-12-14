@@ -1,7 +1,9 @@
-import Page from './page';
+import AppPage from './app.page';
 
-class ProfilePage extends Page {
-    get iconUser() { return $('img[alt=\"avatarIcon\"]');}
+
+class ProfilePage extends AppPage {
+
+    get iconUser() { return $('img[alt="avatarIcon"]');}
 
 }
 

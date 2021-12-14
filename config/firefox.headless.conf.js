@@ -10,4 +10,4 @@ exports.config = merge(baseConf.config, {
             args: ['-headless']
         },
     }],
-}, {clone: false});
+}, { clone: false });
