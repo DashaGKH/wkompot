@@ -22,7 +22,6 @@ workflows:
   commit:
     jobs:
       - build-and-test
-
   nightly:
     triggers:
       - schedule:
