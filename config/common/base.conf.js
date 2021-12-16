@@ -8,7 +8,6 @@ exports.config = {
         './specs/**/*.spec.js'
     ],
     exclude: [
-
     ],
     logLevel: 'info',
     bail: 0,
@@ -19,7 +18,9 @@ exports.config = {
     connectionRetryCount: 1,
 
     services: ['devtools', 'geckodriver'],
-    reporters: ['spec'],
+    reporters: ['spec',['allure', {
+    disableWebdriverStepsReporting: true
+}]],
     framework: 'mocha',
     mochaOpts: {
         ui: 'bdd',
